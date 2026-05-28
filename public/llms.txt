@@ -1,0 +1,28 @@
+# Volumetree
+
+> Volumetree is a product engineering studio that turns ideas into shipped, production-grade products fast — 30-day product launches for founders, and embedded AI engineering squads for enterprises. The operating model favours speed: senior teams, fixed scope, and a discovery-first process that delivers in weeks, not quarters.
+
+Volumetree has shipped 100+ products across 17+ industries with a 60+ person senior engineering team. Co-founded by Shivam Gupta. Delivery hubs in India (HQ), South Africa, and Sweden.
+
+This file follows the llms.txt convention (llmstxt.org) — it gives AI systems a concise, structured map of the site. Update every URL below to the real production domain before going live.
+
+## Core pages
+
+- [Home](https://www.volumetree.com/): Who Volumetree is and the two ways to work with them — fast 30-day launches and enterprise AI engineering.
+- [Launch in 30 Days](https://www.volumetree.com/launch-in-30-days): Idea to a live, production-grade product in 30 days — fixed fee, senior team, delivery guarantee.
+- [Enterprise AI Engineering](https://www.volumetree.com/enterprise-ai-engineering): Senior squads embedded in an enterprise's stack to ship AI products fast and stable — production in ~8 weeks for ~$60K, plus AI training for internal teams.
+- [7-Day Launch Workshop](https://www.volumetree.com/workshops): A 7-day operating system that takes a founder's idea to a shippable plan; tiered from a $299 starter kit to a hands-on concierge build.
+- [Case Studies](https://www.volumetree.com/case-studies): Real client outcomes with measured metrics — Trukkin, eSanjeevani, Tata Crucible, Easemyhiring, Skybag, Elby, Eduployment, Impact (Danske Bank), Sirolular.
+- [About](https://www.volumetree.com/about): The team, the ideology of speed, and founder Shivam Gupta.
+
+## Resources
+
+- [Blog](https://www.volumetree.com/blog): Articles on shipping fast, the operating model, and enterprise AI.
+- [Free E-book](https://www.volumetree.com/ebook): The 30-Day Playbook — a distillation of the launch methodology.
+- [Contact](https://www.volumetree.com/contact): Book a discovery call.
+
+## Key facts
+
+- Methodology: paid discovery (non-negotiable) → pure-play prototyping → beta-test platform → iteration & hardening.
+- Positioning: "Really fast. Really stable." Senior over scaled, fixed over flexible, cuts over features.
+- Enterprise engagements: fixed-fee, ~8 weeks, 100% IP transfer on exit.

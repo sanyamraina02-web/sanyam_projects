@@ -1,0 +1,18 @@
+{
+  "name": "Volumetree",
+  "short_name": "Volumetree",
+  "description": "Idea to launch in 30 days. Product engineering and enterprise AI — we ship what others quote 6 months for.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#402999",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "64x64",
+      "purpose": "any"
+    }
+  ]
+}

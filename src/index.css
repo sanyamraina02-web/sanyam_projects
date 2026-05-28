@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-purple: #402999;
+  --brand-purple-deep: #3d005a;
+  --brand-magenta: #e52673;
+  --ink: #0a0612;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: #0a0612;
+  background: #ffffff;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background: #402999;
+  color: #fff;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-purple/15 bg-brand-purple/[0.04] px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-brand-purple;
+  }
+
+  .h-display {
+    @apply font-display text-4xl font-semibold leading-[1.05] tracking-tightest text-ink-950 sm:text-5xl md:text-6xl lg:text-[68px];
+  }
+
+  .h-section {
+    @apply font-display text-3xl font-semibold leading-[1.1] tracking-tighter text-ink-950 sm:text-4xl md:text-[44px];
+  }
+
+  .h-sub {
+    @apply font-display text-2xl font-semibold leading-tight tracking-tight text-ink-950 sm:text-3xl;
+  }
+
+  .lede {
+    @apply text-lg leading-relaxed text-slate-600 sm:text-xl;
+  }
+
+  .body-muted {
+    @apply text-base leading-relaxed text-slate-600;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple/40 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink-950 text-white hover:bg-ink-900;
+  }
+
+  .btn-gradient {
+    @apply btn text-white shadow-glow;
+    background: linear-gradient(
+      120deg,
+      #3d005a 0%,
+      #402999 30%,
+      #6957ff 60%,
+      #e52673 100%
+    );
+    background-size: 220% 220%;
+    animation: gradientShift 10s ease-in-out infinite;
+  }
+  .btn-gradient:hover {
+    filter: brightness(1.08);
+  }
+
+  .btn-ghost {
+    @apply btn border border-slate-200 bg-white text-ink-950 hover:border-slate-300 hover:bg-slate-50;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white p-7 shadow-soft transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-card;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-1 font-medium text-ink-950 transition-colors hover:text-brand-purple;
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      120deg,
+      #402999 0%,
+      #6957ff 25%,
+      #e52673 55%,
+      #d1023c 80%,
+      #402999 100%
+    );
+    background-size: 220% 220%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 9s ease-in-out infinite;
+  }
+
+  .animated-gradient {
+    background-size: 220% 220%;
+    animation: gradientShift 14s ease-in-out infinite;
+  }
+
+
+  .prose-blog {
+    @apply max-w-none text-[17px] leading-[1.8] text-slate-700;
+  }
+  .prose-blog h1 {
+    @apply mt-10 mb-4 font-display text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl;
+  }
+  .prose-blog h2 {
+    @apply mt-10 mb-3 font-display text-2xl font-semibold tracking-tight text-ink-950;
+  }
+  .prose-blog h3 {
+    @apply mt-8 mb-2 font-display text-xl font-semibold text-ink-950;
+  }
+  .prose-blog p {
+    @apply mb-5 leading-[1.8] text-slate-700;
+  }
+  .prose-blog ul {
+    @apply mb-5 list-disc space-y-2 pl-6 text-slate-700;
+  }
+  .prose-blog ol {
+    @apply mb-5 list-decimal space-y-2 pl-6 text-slate-700;
+  }
+  .prose-blog a {
+    @apply text-brand-purple underline decoration-brand-purple/30 underline-offset-4 hover:decoration-brand-purple;
+  }
+  .prose-blog blockquote {
+    @apply my-6 border-l-4 border-brand-purple/30 bg-brand-purple/[0.03] px-5 py-3 italic text-slate-700;
+  }
+  .prose-blog code {
+    @apply rounded bg-slate-100 px-1.5 py-0.5 text-[0.9em] text-ink-900;
+  }
+  .prose-blog pre {
+    @apply mb-5 overflow-x-auto rounded-xl bg-ink-950 p-5 text-sm text-slate-100;
+  }
+  .prose-blog pre code {
+    @apply bg-transparent p-0 text-slate-100;
+  }
+  .prose-blog img {
+    @apply my-6 rounded-xl;
+  }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Paints a line through, then retracts back */
+@keyframes sweepLine {
+  0%, 100% { clip-path: inset(0 100% 0 0); }
+  50%      { clip-path: inset(0 0% 0 0); }
+}
+
+/* Glowing head that travels with the sweeping line */
+@keyframes travelHead {
+  0%, 100% { left: 0; opacity: 0; }
+  10%      { opacity: 1; }
+  50%      { left: calc(100% - 14px); opacity: 1; }
+  90%      { opacity: 1; }
+}
+
+/* Brand sound-wave bars — equalizer-style pulse */
+@keyframes soundWave {
+  0%, 100% { transform: scaleY(0.35); }
+  25%      { transform: scaleY(0.85); }
+  50%      { transform: scaleY(0.55); }
+  75%      { transform: scaleY(1); }
+}
+
+/* Ripple — concentric rings that expand and fade. Use sparingly. */
+@keyframes ripplePulse {
+  0%   { transform: scale(0.2); opacity: 0; }
+  15%  { opacity: 0.9; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* Slider thumb pulse — gently invites interaction */
+@keyframes thumbPulse {
+  0%, 100% { box-shadow: 0 4px 12px rgba(64, 41, 153, 0.35), 0 0 0 0 rgba(229, 38, 115, 0); }
+  50%      { box-shadow: 0 4px 14px rgba(64, 41, 153, 0.45), 0 0 0 8px rgba(229, 38, 115, 0.12); }
+}
+
+/* Volumetree custom range slider */
+.slider-vt {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: grab;
+  height: 22px;
+  padding: 0;
+}
+.slider-vt:active { cursor: grabbing; }
+
+/* WebKit (Chrome / Safari) */
+.slider-vt::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 100px;
+  background: linear-gradient(
+    to right,
+    #402999 0%,
+    #6957ff var(--fill, 0%),
+    #e2e8f0 var(--fill, 0%),
+    #e2e8f0 100%
+  );
+}
+.slider-vt::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #402999 0%, #6957ff 60%, #e52673 100%);
+  background-size: 200% 200%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(64, 41, 153, 0.35);
+  cursor: grab;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  animation: thumbPulse 2.6s ease-in-out infinite, gradientShift 6s ease-in-out infinite;
+}
+.slider-vt::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+.slider-vt:active::-webkit-slider-thumb {
+  transform: scale(1.1);
+  cursor: grabbing;
+  animation: none;
+  box-shadow: 0 6px 18px rgba(229, 38, 115, 0.55);
+}
+
+/* Firefox */
+.slider-vt::-moz-range-track {
+  height: 6px;
+  border-radius: 100px;
+  background: #e2e8f0;
+}
+.slider-vt::-moz-range-progress {
+  height: 6px;
+  border-radius: 100px;
+  background: linear-gradient(to right, #402999, #6957ff);
+}
+.slider-vt::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #402999 0%, #6957ff 60%, #e52673 100%);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(64, 41, 153, 0.35);
+  cursor: grab;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  animation: thumbPulse 2.6s ease-in-out infinite;
+}
+.slider-vt::-moz-range-thumb:hover { transform: scale(1.15); }
+.slider-vt:active::-moz-range-thumb {
+  transform: scale(1.1);
+  cursor: grabbing;
+  animation: none;
+}
+
+.bg-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(64, 41, 153, 0.08) 1px,
+    transparent 0
+  );
+  background-size: 28px 28px;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 12%,
+    #000 88%,
+    transparent
+  );
+}

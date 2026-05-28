@@ -1,0 +1,38 @@
+# robots.txt — Volumetree
+# ---------------------------------------------------------------------------
+# NOTE: update the Sitemap URL below to your real production domain.
+# ---------------------------------------------------------------------------
+
+# All standard search-engine crawlers — full access.
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers — explicitly welcomed (see /llms.txt).
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.volumetree.com/sitemap.xml
